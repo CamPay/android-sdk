@@ -1,1 +1,1 @@
-# campay-android-sdk
+# [CamPay](https://www.campay.net/) Android SDK
