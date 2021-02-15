@@ -45,9 +45,6 @@ dependencies {
 }
 
 
-def githubProperties = new Properties()
-githubProperties.load(new FileInputStream(rootProject.file("github.properties"))) //Set env variable GPR_USER & GPR_API_KEY if not adding a properties file
-
 afterEvaluate {
     publishing {
         publications {
@@ -57,18 +54,18 @@ afterEvaluate {
                 from components.release
 
                 // You can then customize attributes of the publication as shown below.
-                groupId = 'net.campay.android'
-                artifactId = 'final'
-                version = '1.0'
+                groupId = 'net.campay'
+                artifactId = 'android-sdk'
+                version = '0.0.1'
             }
             // Creates a Maven publication called “debug”.
             debug(MavenPublication) {
                 // Applies the component for the debug build variant.
                 from components.debug
 
-                groupId = 'net.campay.android'
-                artifactId = 'final-debug'
-                version = '1.0'
+                groupId = 'net.campay'
+                artifactId = 'android-ask-debug'
+                version = '0.0.1'
             }
         }
 
@@ -82,8 +79,8 @@ afterEvaluate {
 
                 credentials {
                     /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
-                    username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
-                    password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
+                    username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
+                    password = project.findProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
                 }
             }
         }
