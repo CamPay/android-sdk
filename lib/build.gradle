@@ -64,7 +64,7 @@ afterEvaluate {
                 from components.debug
 
                 groupId = 'net.campay'
-                artifactId = 'android-ask-debug'
+                artifactId = 'android-sdk-debug'
                 version = '0.0.1'
             }
         }
