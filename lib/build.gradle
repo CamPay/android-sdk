@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'maven-publish'
+    id "org.sonarqube" version "3.1.1"
 }
 
 android {
@@ -28,6 +29,18 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
+sonarqube {
+    // this is silly but specifying the actual settings file is not supported
+    properties {
+        def props = new Properties()
+        file("sonar-project.properties").withInputStream { props.load(it) }
+        props.each {
+            property("${it.key}", "${it.value}")
+        }
+    }
+}
+
 
 dependencies {
 
