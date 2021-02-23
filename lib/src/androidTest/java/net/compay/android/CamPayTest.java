@@ -9,26 +9,26 @@ public class CamPayTest extends TestCase {
     }
 
     public void tearDown() throws Exception {
-        throw UnsupportedOperationException();
+        throw new UnsupportedOperationException();
     }
 
     public void testCollect() {
-        throw UnsupportedOperationException();
+        throw new UnsupportedOperationException();
 
     }
 
     public void testTransactionStatus() {
-        throw UnsupportedOperationException();
+        throw new UnsupportedOperationException();
 
     }
 
     public void testWithdraw() {
-        throw UnsupportedOperationException();
+        throw new UnsupportedOperationException();
 
     }
 
     public void testApplicationBalance() {
-        throw UnsupportedOperationException();
+        throw new UnsupportedOperationException();
 
     }
 }
