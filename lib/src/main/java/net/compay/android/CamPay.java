@@ -18,6 +18,9 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+/**
+ * The type Cam pay.
+ */
 public class CamPay {
 
     private static CamPay camPayInstance;
@@ -44,6 +47,14 @@ public class CamPay {
         this.restService = retrofit.create(RestServices.class);
     }
 
+    /**
+     * Init Cam Pay mobile SDK.
+     *
+     * @param username    the username
+     * @param password    the password
+     * @param environment the environment
+     * @return the cam pay
+     */
     public static CamPay init(String username, String password, Environment environment) {
         if (camPayInstance == null) {
             camPayInstance = new CamPay(username, password, environment);
@@ -51,28 +62,56 @@ public class CamPay {
         return camPayInstance;
     }
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static CamPay getInstance() {
         return camPayInstance;
     }
 
+    /**
+     * Collection request.
+     *
+     * @param request the request
+     * @return the observable
+     */
     public @NonNull Observable<PaymentRequestResponse> collect(@NonNull CollectionRequest request) {
         return this.getToken()
                 .switchMap(token -> restService.collect(
                         request, "Token " + token.getToken()));
     }
 
+    /**
+     * Transaction status.
+     *
+     * @param transactionId the transaction id
+     * @return the observable
+     */
     public @NonNull Observable<TransactionStatusResponse> transactionStatus(@NonNull String transactionId) {
         return this.getToken()
                 .switchMap(token -> restService.transactionStatus(
                         transactionId, "Token " + token.getToken()));
     }
 
+    /**
+     * Withdraw.
+     *
+     * @param withdrawRequest the withdraw request
+     * @return the observable
+     */
     public @NonNull Observable<WithdrawalResponse> withdraw(@NonNull WithdrawRequest withdrawRequest) {
         return this.getToken()
                 .switchMap(token -> restService.withdraw(
                         withdrawRequest, "Token " + token.getToken()));
     }
 
+    /**
+     * Application balance.
+     *
+     * @return the observable
+     */
     public @NonNull Observable<ApplicationBalanceResponse> applicationBalance() {
         return this.getToken()
                 .switchMap(token -> restService.applicationBalance(
@@ -89,7 +128,17 @@ public class CamPay {
         );
     }
 
+    /**
+     * The enum Environment.
+     */
     public enum Environment {
-        DEV, PROD
+        /**
+         * Development environment.
+         */
+        DEV,
+        /**
+         * Production environment.
+         */
+        PROD
     }
 }
