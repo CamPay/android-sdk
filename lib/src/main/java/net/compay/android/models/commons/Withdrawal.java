@@ -13,12 +13,6 @@ public class Withdrawal {
     private String externalReference;
 
     /**
-     * Instantiates a new Withdraw request.
-     */
-    public Withdrawal() {
-    }
-
-    /**
      * Gets amount.
      *
      * @return the amount

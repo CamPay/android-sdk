@@ -14,12 +14,6 @@ public class PaymentRequestResponse {
     private String operator;
 
     /**
-     * Instantiates a new Payment request response.
-     */
-    public PaymentRequestResponse() {
-    }
-
-    /**
      * Gets reference.
      *
      * @return the reference

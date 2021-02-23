@@ -18,12 +18,6 @@ public class ApplicationBalanceResponse {
     private String currency;
 
     /**
-     * Instantiates a new Application balance response.
-     */
-    public ApplicationBalanceResponse() {
-    }
-
-    /**
      * Gets total balance.
      *
      * @return the total balance

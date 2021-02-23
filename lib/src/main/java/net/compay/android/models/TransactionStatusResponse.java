@@ -22,12 +22,6 @@ public class TransactionStatusResponse {
     private String operatorReference;
 
     /**
-     * Instantiates a new Transaction status response.
-     */
-    public TransactionStatusResponse() {
-    }
-
-    /**
      * Gets reference.
      *
      * @return the reference

@@ -8,12 +8,6 @@ public class TokenRequest {
     private String password;
 
     /**
-     * Instantiates a new Token request.
-     */
-    public TokenRequest() {
-    }
-
-    /**
      * Gets username.
      *
      * @return the username

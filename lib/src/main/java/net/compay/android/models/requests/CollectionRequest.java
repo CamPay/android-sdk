@@ -17,9 +17,6 @@ public class CollectionRequest {
     @SerializedName("external_reference")
     private String externalReference;
 
-    private CollectionRequest() {
-    }
-
     /**
      * Gets amount.
      *
