@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import net.compay.android.CamPay
 import net.compay.android.models.requests.CollectionRequest
-import net.compay.android.models.requests.WithdrawRequest
 import java.util.*
 import java.util.concurrent.TimeUnit
 

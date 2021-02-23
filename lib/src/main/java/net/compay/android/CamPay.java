@@ -26,7 +26,8 @@ public class CamPay {
     private static CamPay camPayInstance;
     private final String username;
     private final String password;
-    private RestServices restService;
+    private final RestServices restService;
+    private static final String headerIni = "Token ";
 
 
     private CamPay(String username, String password, Environment environment) {
@@ -80,7 +81,7 @@ public class CamPay {
     public @NonNull Observable<PaymentRequestResponse> collect(@NonNull CollectionRequest request) {
         return this.getToken()
                 .switchMap(token -> restService.collect(
-                        request, "Token " + token.getToken()));
+                        request, headerIni + token.getToken()));
     }
 
     /**
@@ -92,7 +93,7 @@ public class CamPay {
     public @NonNull Observable<TransactionStatusResponse> transactionStatus(@NonNull String transactionId) {
         return this.getToken()
                 .switchMap(token -> restService.transactionStatus(
-                        transactionId, "Token " + token.getToken()));
+                        transactionId, headerIni + token.getToken()));
     }
 
     /**
@@ -104,7 +105,7 @@ public class CamPay {
     public @NonNull Observable<WithdrawalResponse> withdraw(@NonNull WithdrawRequest withdrawRequest) {
         return this.getToken()
                 .switchMap(token -> restService.withdraw(
-                        withdrawRequest, "Token " + token.getToken()));
+                        withdrawRequest, headerIni + token.getToken()));
     }
 
     /**
@@ -115,7 +116,7 @@ public class CamPay {
     public @NonNull Observable<ApplicationBalanceResponse> applicationBalance() {
         return this.getToken()
                 .switchMap(token -> restService.applicationBalance(
-                        "Token " + token.getToken()));
+                        headerIni + token.getToken()));
     }
 
     private Observable<Token> getToken() {
