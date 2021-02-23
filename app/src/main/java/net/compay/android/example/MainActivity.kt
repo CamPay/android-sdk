@@ -4,11 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import net.compay.android.CamPay
 import net.compay.android.models.requests.CollectionRequest
+import net.compay.android.models.requests.WithdrawRequest
 import java.util.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var camPay: CamPay;
+    private lateinit var camPay: CamPay
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,15 +25,15 @@ class MainActivity : AppCompatActivity() {
             CollectionRequest.CollectionRequestBuilder
                 .aCollectionRequest()
                 .withAmount("100")
-                .withFrom("237672474969")
-                .withDescription("237672474969")
+                .withFrom("237XXXXXXXXX")
+                .withDescription("some reason")
                 .withExternalReference(UUID.randomUUID().toString())
                 .withCurrency("XAF")
                 .build()
         ).delay(1, TimeUnit.MINUTES)
             .switchMap { collectResponse ->
                 println(collectResponse)
-                return@switchMap camPay.transactionStatus(collectResponse.reference);
+                return@switchMap camPay.transactionStatus(collectResponse.reference)
             }.subscribe { transactionStatusResponse ->
                 println(transactionStatusResponse)
             }

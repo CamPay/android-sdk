@@ -61,12 +61,44 @@ To view an extensive list of samples, clone this project and run the app module.
                 .withExternalReference(UUID.randomUUID().toString())
                 .withCurrency("XAF")
                 .build()
-        ).delay(1, TimeUnit.MINUTES)
+        ).delay(1, TimeUnit.MINUTES) // delay for a minute before checking the transaction status
             .switchMap { collectResponse ->
                 println(collectResponse)
-                return@switchMap camPay.transactionStatus(collectResponse.reference);
+                return@switchMap camPay.transactionStatus(collectResponse.reference) //  check the transaction status
             }.subscribe { transactionStatusResponse ->
                 println(transactionStatusResponse)
+            }
+  ```
+
+
+  - Get application balance. 
+  ```kotlin
+        val camPay = CamPay.getInstance()
+
+        camPay.applicationBalance()
+            .subscribe { applicationBalanceResponse ->
+                println(applicationBalanceResponse)
+            }
+  ```
+
+
+  - Place a withdrawal request
+  
+  ```kotlin
+        val camPay = CamPay.getInstance()
+
+        
+        camPay.withdraw(
+            WithdrawRequest.WithdrawRequestBuilder
+                .aWithdrawRequest()
+                .withTo("237672474969")
+                .withExternalReference(UUID.randomUUID().toString())
+                .withDescription("some reason")
+                .withAmount("100")
+                .build()
+        )
+            .subscribe { withdrawalResponse ->
+                println(withdrawalResponse)
             }
   ```
 
