@@ -32,7 +32,7 @@ for notes on how to deploy the project on a live system.
 
 What things you need to install the software and how to install them
  - An account on [CamPay](https://www.campay.net/) platform
- - An application on the CamOay platform.
+ - An application on the [CamPay platform](https://demo.campay.net/en/users/signup/).
  - Credentials for connecting to the CamPay platform
 
 ### Installing
@@ -92,6 +92,8 @@ To view an extensive list of samples, clone this project and run the app module.
 
 
   - Place a withdrawal request
+
+  > Please enable API withdrawal under app settings before trying this request
   
   ```kotlin
         val camPay = CamPay.getInstance()
