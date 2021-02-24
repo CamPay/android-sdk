@@ -1,15 +1,14 @@
 # [CamPay](https://www.campay.net/) Android SDK
 
-One Paragraph of project description goes here
-
+![Campay Art](./art/campay.png)
 
 ![Android CI](https://github.com/CamPay/android-sdk/workflows/Android%20CI/badge.svg)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=bugs)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=alert_status)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=security_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=bugs)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=alert_status)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=ncloc)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=coverage)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
@@ -24,8 +23,7 @@ One Paragraph of project description goes here
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
+These instructions will get you started with the CamPay SDK for development and testing purposes. See deployment
 for notes on how to deploy the project on a live system.
 
 ### Prerequisites
@@ -120,6 +118,3 @@ Add additional notes about how to deploy this on a live system
 
   - [Retrofit](https://github.com/square/retrofit/) - A type-safe HTTP client for Android and Java.
 
-## Acknowledgments
-
-  - 
