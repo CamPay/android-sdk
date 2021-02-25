@@ -3,6 +3,7 @@
 ![Campay Art](./art/campay.png)
 
 ![Android CI](https://github.com/CamPay/android-sdk/workflows/Android%20CI/badge.svg)
+[![](https://jitpack.io/v/CamPay/android-sdk.svg)](https://jitpack.io/#CamPay/android-sdk)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=security_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
@@ -38,8 +39,22 @@ What things you need to install the software and how to install them
 A step by step series of examples that tell you how to get a development
 env running
 
+- Check out the available versions on [Jitpack](https://jitpack.io/#CamPay/android-sdk/)
+
+-  Add the JitPack repository to your build file
+   ```groovy
+       allprojects {
+        repositories {
+          ...
+          maven { url 'https://jitpack.io' }
+        }
+      }
+   ```
+- Add the dependency
 ```groovy
-    implementation 'net.campay:android-sdk-debug:{latest_version}'
+    implementation 'com.github.CamPay.android-sdk:android-sdk:{latest_version}'
+    // Peer dependency
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
 ```
 
 ## Running the samples
@@ -117,4 +132,5 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
   - [Retrofit](https://github.com/square/retrofit/) - A type-safe HTTP client for Android and Java.
+  - [RxJava3](https://github.com/ReactiveX/RxJava/tree/3.x) - Reactive Extensions for the JVM
 
