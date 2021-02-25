@@ -3,6 +3,7 @@
 ![Campay Art](./art/campay.png)
 
 ![Android CI](https://github.com/CamPay/android-sdk/workflows/Android%20CI/badge.svg)
+[![](https://jitpack.io/v/CamPay/android-sdk.svg)](https://jitpack.io/#CamPay/android-sdk)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=security_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=CamPay_android-sdk&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=CamPay_android-sdk)
