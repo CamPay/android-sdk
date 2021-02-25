@@ -7,13 +7,13 @@ import com.google.gson.annotations.SerializedName;
  */
 public class ApplicationBalanceResponse {
     @SerializedName("total_balance")
-    private int totalBalance;
+    private double totalBalance;
 
     @SerializedName("mtn_balance")
-    private int mtnBalance;
+    private double mtnBalance;
 
     @SerializedName("orange_balance")
-    private int orangeBalance;
+    private double orangeBalance;
 
     private String currency;
 
@@ -22,7 +22,7 @@ public class ApplicationBalanceResponse {
      *
      * @return the total balance
      */
-    public int getTotalBalance() {
+    public double getTotalBalance() {
         return totalBalance;
     }
 
@@ -31,7 +31,7 @@ public class ApplicationBalanceResponse {
      *
      * @param totalBalance the total balance
      */
-    public void setTotalBalance(int totalBalance) {
+    public void setTotalBalance(double totalBalance) {
         this.totalBalance = totalBalance;
     }
 
@@ -40,7 +40,7 @@ public class ApplicationBalanceResponse {
      *
      * @return the mtn balance
      */
-    public int getMtnBalance() {
+    public double getMtnBalance() {
         return mtnBalance;
     }
 
@@ -49,7 +49,7 @@ public class ApplicationBalanceResponse {
      *
      * @param mtnBalance the mtn balance
      */
-    public void setMtnBalance(int mtnBalance) {
+    public void setMtnBalance(double mtnBalance) {
         this.mtnBalance = mtnBalance;
     }
 
@@ -58,7 +58,7 @@ public class ApplicationBalanceResponse {
      *
      * @return the orange balance
      */
-    public int getOrangeBalance() {
+    public double getOrangeBalance() {
         return orangeBalance;
     }
 

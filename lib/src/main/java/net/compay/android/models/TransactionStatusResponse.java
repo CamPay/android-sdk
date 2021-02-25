@@ -10,7 +10,7 @@ public class TransactionStatusResponse {
 
     private String status;
 
-    private int amount;
+    private double amount;
 
     private String currency;
 
@@ -62,7 +62,7 @@ public class TransactionStatusResponse {
      *
      * @return the amount
      */
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
@@ -71,7 +71,7 @@ public class TransactionStatusResponse {
      *
      * @param amount the amount
      */
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
