@@ -42,7 +42,7 @@ env running
 - Check out the available versions on [Jitpack](https://jitpack.io/#CamPay/android-sdk/)
 
 ```groovy
-    implementation 'net.campay:android-sdk-debug:{latest_version}'
+    implementation 'com.github.CamPay:android-sdk:{latest_version}'
 ```
 
 ## Running the samples
