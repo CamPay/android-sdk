@@ -38,6 +38,8 @@ What things you need to install the software and how to install them
 A step by step series of examples that tell you how to get a development
 env running
 
+- Check out the available versions on [Jitpack](https://jitpack.io/#CamPay/android-sdk/)
+
 ```groovy
     implementation 'net.campay:android-sdk-debug:{latest_version}'
 ```
