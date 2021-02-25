@@ -52,7 +52,9 @@ env running
    ```
 - Add the dependency
 ```groovy
-    implementation 'com.github.CamPay.android-sdk:android-sdk:{latest_version}'
+    implementation 'com.github.CamPay.android-sdk:android-sdk:{latest_version}'y
+    // Peer dependency
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
 ```
 
 ## Running the samples
@@ -130,4 +132,5 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
   - [Retrofit](https://github.com/square/retrofit/) - A type-safe HTTP client for Android and Java.
+  - [RxJava](https://github.com/ReactiveX/RxJava/tree/3.x) - Reactive Extensions for the JVM
 
