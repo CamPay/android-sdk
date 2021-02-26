@@ -56,6 +56,10 @@ env running
     // Peer dependency
     implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
 ```
+- Add the internet permission to your application
+```xml
+    <uses-permission android:name="android.permission.INTERNET" />
+```
 
 ## Running the samples
 
