@@ -52,7 +52,7 @@ env running
    ```
 - Add the dependency
 ```groovy
-    implementation 'com.github.CamPay.android-sdk:android-sdk:+'
+    implementation 'com.github.CamPay.android-sdk:android-sdk:latest.release'
     // Peer dependency
     implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
 ```
