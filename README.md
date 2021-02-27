@@ -132,6 +132,15 @@ To view an extensive list of samples, clone this project and run the app module.
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
+Change the environment of the library introduction to PROD
+
+  ```kotlin
+        CamPay.init(
+            "<username>",
+            "<password>",
+            CamPay.Environment.PROD // environment
+        )
+  ```
 
 ## Built With
 
