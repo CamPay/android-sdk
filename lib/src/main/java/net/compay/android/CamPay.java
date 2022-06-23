@@ -39,7 +39,7 @@ public class CamPay {
                 .addInterceptor(logging)
                 .build();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(environment == Environment.PROD ? "https://campay.net/" : "https://demo.campay.net/")
+                .baseUrl(environment == Environment.PROD ? "https://www.campay.net/" : "https://demo.campay.net/")
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
